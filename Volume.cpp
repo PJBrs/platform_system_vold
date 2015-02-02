@@ -423,7 +423,7 @@ int Volume::mountVol() {
             gid = AID_SDCARD_RW;
         } else {
             // For secondary external storage we keep things locked up.
-            gid = AID_MEDIA_RW;
+            gid = AID_SDCARD_RW;
         }
         if (Fat::doMount(devicePath, "/mnt/secure/staging", false, false, false,
                 AID_SYSTEM, gid, 0702, true)) {
